@@ -11,6 +11,9 @@ img[align="right"] {
 img[align="left"] {
     float: left;
 }
+svg:not(:root) { 
+    overflow: hidden; 
+}
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -75,6 +78,12 @@ ul, ol {
 dd {
     margin: 0 0 0 2.5em;
 }
+@media print {
+	p, h1, h2, h3, h4, h5, h6 { 
+        orphans: 3; 
+        widows: 3;
+    }
+}
 header, nav, section, menu, article, main, figure, aside, footer, details, figcaption, hgroup, summary {
     display: block;
     margin: 0;
@@ -111,9 +120,6 @@ a {
 a[href^=tel] {
     text-decoration: underline;
     color: inherit;
-}
-a:hover {
-    text-decoration: none;
 }
 a:hover,
 a:active {
