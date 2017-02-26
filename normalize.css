@@ -52,8 +52,13 @@ input[type="search"] {
 input[type="hidden"] {
     display: none;
 }
-[disabled] {
-    cursor: default;
+input[disabled],
+button[disabled],
+select[disabled],
+textarea[disabled],
+fieldset[disabled] {
+  pointer-events: none;
+  cursor: default;
 }
 sub, sup {
     line-height: 0;
